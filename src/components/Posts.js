@@ -9,6 +9,7 @@ class Posts extends Component {
     }
   }
   componentWillMount() {
+    this.props.fetchPosts();
   }
   render() {
     const postItems = this.state.posts.map(post => (
