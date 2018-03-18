@@ -27,4 +27,7 @@ class Posts extends Component {
     )
   }
 }
-export default connect(null, { fetchPosts })(Posts);
+const mapStateToProps = state => ({
+  posts: state.posts.items
+})
+export default connect(mapStateToProps, { fetchPosts })(Posts);
